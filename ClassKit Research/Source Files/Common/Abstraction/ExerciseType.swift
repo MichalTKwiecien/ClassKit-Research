@@ -12,6 +12,9 @@ protocol ExerciseType {
     /// Available answers
     var answers: [Answer] { get }
     
+    /// State of the exercise
+    var state: ExerciseState { get set }
+    
     /// Validates if given answer is correct
     ///
     /// - Parameter answer: Selected answer

@@ -1,12 +1,12 @@
 //
-//  ExercisesGeneratorService.swift
+//  ExerciseModuleGeneratorService.swift
 //  ClassKit Research
 //
 
 
-final class ExercisesGeneratorService {
+final class ExerciseModuleGeneratorService {
     
-    static func generateEasyMathExercises() -> [ExerciseType] {
+    static func generateEasyMathModule() -> Module {
         let exercise1 = Exercise(
             question: "12 + 7 = ?",
             answers: [
@@ -34,6 +34,9 @@ final class ExercisesGeneratorService {
                 Answer(value: "24", correct: true),
             ]
         )
-        return [exercise1, exercise2, exercise3]
+        return Module(
+            title: "Easy algebra exercises",
+            exercises: [exercise1, exercise2, exercise3]
+        )
     }
 }

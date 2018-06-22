@@ -6,7 +6,7 @@
 
 final class GameService {
     
-    lazy var exercises: [ExerciseType] = ExercisesGeneratorService.generateEasyMathExercises()
+    private(set) lazy var easyMathModule: Module = ExerciseModuleGeneratorService.generateEasyMathModule()
     
     init() {
         

@@ -21,7 +21,9 @@
 		7C9DEDC320DCDB6F005694BC /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDC220DCDB6F005694BC /* Exercise.swift */; };
 		7C9DEDC520DCDBAB005694BC /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDC420DCDBAB005694BC /* ExerciseType.swift */; };
 		7C9DEDC720DCDC0D005694BC /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDC620DCDC0D005694BC /* Answer.swift */; };
-		7C9DEDC920DCEC84005694BC /* ExercisesGeneratorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDC820DCEC84005694BC /* ExercisesGeneratorService.swift */; };
+		7C9DEDC920DCEC84005694BC /* ExerciseModuleGeneratorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDC820DCEC84005694BC /* ExerciseModuleGeneratorService.swift */; };
+		7C9DEDCB20DCEEF3005694BC /* ExerciseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDCA20DCEEF3005694BC /* ExerciseState.swift */; };
+		7C9DEDCD20DCF010005694BC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDCC20DCF010005694BC /* Module.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +43,9 @@
 		7C9DEDC220DCDB6F005694BC /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		7C9DEDC420DCDBAB005694BC /* ExerciseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
 		7C9DEDC620DCDC0D005694BC /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
-		7C9DEDC820DCEC84005694BC /* ExercisesGeneratorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesGeneratorService.swift; sourceTree = "<group>"; };
+		7C9DEDC820DCEC84005694BC /* ExerciseModuleGeneratorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleGeneratorService.swift; sourceTree = "<group>"; };
+		7C9DEDCA20DCEEF3005694BC /* ExerciseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseState.swift; sourceTree = "<group>"; };
+		7C9DEDCC20DCF010005694BC /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 			children = (
 				7C9DEDC220DCDB6F005694BC /* Exercise.swift */,
 				7C9DEDC620DCDC0D005694BC /* Answer.swift */,
+				7C9DEDCA20DCEEF3005694BC /* ExerciseState.swift */,
+				7C9DEDCC20DCF010005694BC /* Module.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				7C9DEDC020DCDB56005694BC /* GameService.swift */,
-				7C9DEDC820DCEC84005694BC /* ExercisesGeneratorService.swift */,
+				7C9DEDC820DCEC84005694BC /* ExerciseModuleGeneratorService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -274,11 +280,13 @@
 				7C9DEDBD20DCD560005694BC /* IntroductionView.swift in Sources */,
 				7C9DEDB220DCCCDE005694BC /* UIViewExtension+Constraint.swift in Sources */,
 				7C9DED9220DCCAD2005694BC /* ApplicationDelegate.swift in Sources */,
-				7C9DEDC920DCEC84005694BC /* ExercisesGeneratorService.swift in Sources */,
+				7C9DEDC920DCEC84005694BC /* ExerciseModuleGeneratorService.swift in Sources */,
 				7C9DEDC720DCDC0D005694BC /* Answer.swift in Sources */,
 				7C9DEDC520DCDBAB005694BC /* ExerciseType.swift in Sources */,
 				7C9DEDBB20DCD507005694BC /* IntroductionViewController.swift in Sources */,
 				7C9DEDB520DCCD03005694BC /* ViewSetupable.swift in Sources */,
+				7C9DEDCB20DCEEF3005694BC /* ExerciseState.swift in Sources */,
+				7C9DEDCD20DCF010005694BC /* Module.swift in Sources */,
 				7C9DEDC120DCDB56005694BC /* GameService.swift in Sources */,
 				7C9DEDC320DCDB6F005694BC /* Exercise.swift in Sources */,
 			);
