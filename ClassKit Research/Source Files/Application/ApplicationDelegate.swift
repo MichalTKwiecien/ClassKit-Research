@@ -15,9 +15,7 @@ private final class ApplicationDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        let availableModules = [gameService.easyMathModule]
-        
-        let introductionViewController = SelectModuleViewController(modules: availableModules, viewMaker: SelectModuleView())
+        let introductionViewController = SelectModuleViewController(modules: gameService.modules, viewMaker: SelectModuleView())
         
         window?.rootViewController = introductionViewController
         window?.makeKeyAndVisible()

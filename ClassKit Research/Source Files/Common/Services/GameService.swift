@@ -6,9 +6,9 @@
 
 final class GameService {
     
-    private(set) lazy var easyMathModule: Module = ExerciseModuleGeneratorService.generateEasyMathModule()
+    private(set) var modules = [Module]()
     
     init() {
-        
+        modules.append(ExerciseModuleGeneratorService.generateEasyMathModule())
     }
 }
