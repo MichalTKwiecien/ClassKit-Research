@@ -41,4 +41,10 @@ final class SelectModuleViewController: TypedViewController<SelectModuleView>, U
         cell.textLabel?.text = model.title
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = modules[indexPath.row]
+        let moduleQuizViewController = ModuleQuizViewController(module: model, viewMaker: ModuleQuizView())
+        present(moduleQuizViewController, animated: true)
+    }
 }

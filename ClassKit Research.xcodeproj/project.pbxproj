@@ -26,6 +26,8 @@
 		7C9DEDCD20DCF010005694BC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDCC20DCF010005694BC /* Module.swift */; };
 		7C9DEDCF20DCF337005694BC /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDCE20DCF337005694BC /* UITableViewExtension.swift */; };
 		7C9DEDD120DCF35B005694BC /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDD020DCF35B005694BC /* NSObjectExtension.swift */; };
+		7C9DEDD420DCFDFD005694BC /* ModuleQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDD320DCFDFD005694BC /* ModuleQuizView.swift */; };
+		7C9DEDD620DCFE31005694BC /* ModuleQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDD520DCFE31005694BC /* ModuleQuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		7C9DEDCC20DCF010005694BC /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		7C9DEDCE20DCF337005694BC /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		7C9DEDD020DCF35B005694BC /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		7C9DEDD320DCFDFD005694BC /* ModuleQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleQuizView.swift; sourceTree = "<group>"; };
+		7C9DEDD520DCFE31005694BC /* ModuleQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleQuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				7C9DEDAC20DCCC7F005694BC /* Select module */,
+				7C9DEDD220DCFDBC005694BC /* Module quiz */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -208,6 +213,15 @@
 				7C9DEDB820DCCE3F005694BC /* README.md */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		7C9DEDD220DCFDBC005694BC /* Module quiz */ = {
+			isa = PBXGroup;
+			children = (
+				7C9DEDD520DCFE31005694BC /* ModuleQuizViewController.swift */,
+				7C9DEDD320DCFDFD005694BC /* ModuleQuizView.swift */,
+			);
+			path = "Module quiz";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +304,7 @@
 				7C9DEDCF20DCF337005694BC /* UITableViewExtension.swift in Sources */,
 				7C9DEDD120DCF35B005694BC /* NSObjectExtension.swift in Sources */,
 				7C9DEDC720DCDC0D005694BC /* Answer.swift in Sources */,
+				7C9DEDD620DCFE31005694BC /* ModuleQuizViewController.swift in Sources */,
 				7C9DEDC520DCDBAB005694BC /* ExerciseType.swift in Sources */,
 				7C9DEDBB20DCD507005694BC /* SelectModuleViewController.swift in Sources */,
 				7C9DEDB520DCCD03005694BC /* ViewSetupable.swift in Sources */,
@@ -297,6 +312,7 @@
 				7C9DEDCD20DCF010005694BC /* Module.swift in Sources */,
 				7C9DEDC120DCDB56005694BC /* GameService.swift in Sources */,
 				7C9DEDC320DCDB6F005694BC /* Exercise.swift in Sources */,
+				7C9DEDD420DCFDFD005694BC /* ModuleQuizView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
