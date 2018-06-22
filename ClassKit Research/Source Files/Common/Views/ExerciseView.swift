@@ -8,7 +8,7 @@ import UIKit
 
 final class ExerciseView: View, ViewSetupable {
     
-    private var exercise: Exercise!
+    private var exercise: ExerciseType!
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel()
@@ -17,7 +17,8 @@ final class ExerciseView: View, ViewSetupable {
         return view.layoutable()
     }()
     
-    func setup(with exercise: Exercise) {
+    func setup(with exercise: ExerciseType) {
+        self.exercise = exercise
         titleLabel.text = exercise.question
     }
     
@@ -33,6 +34,8 @@ final class ExerciseView: View, ViewSetupable {
     }
     
     func setupProperties() {
-        backgroundColor = .lightGray
+        backgroundColor = .white
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderWidth = 2
     }
 }

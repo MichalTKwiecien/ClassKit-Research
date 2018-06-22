@@ -10,8 +10,14 @@ enum ExerciseState: Equatable {
     
     static func == (lhs: ExerciseState, rhs: ExerciseState) -> Bool {
         switch (lhs, rhs) {
-        case (_, _):
-            return lhs == rhs
+        case (.unanswered, .unanswered):
+            return true
+        case (.answered(let correctL), .answered(let correctR)):
+            return correctL == correctR
+        case (.answered(_), .unanswered):
+            return false
+        case (.unanswered, .answered(_)):
+            return false
         }
     }
 }

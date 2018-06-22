@@ -12,4 +12,8 @@ struct Module {
     var allExercisesDone: Bool {
         return exercises.filter { $0.state == .unanswered }.count == 0
     }
+    
+    var nextUnansweredExercise: ExerciseType? {
+        return exercises.filter { $0.state == .unanswered }.first
+    }
 }

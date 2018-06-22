@@ -16,5 +16,11 @@ final class ModuleQuizViewController: TypedViewController<ModuleQuizView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         customView.titleLabel.text = module.title
+        showNextExercise()
+    }
+    
+    private func showNextExercise() {
+        guard let nextExercise = module.nextUnansweredExercise else { return }
+        customView.exerciseView.setup(with: nextExercise)
     }
 }
