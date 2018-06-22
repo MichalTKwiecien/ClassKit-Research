@@ -13,6 +13,10 @@ private final class ApplicationDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        let introductionViewController = IntroductionViewController(viewMaker: IntroductionView())
+        window?.rootViewController = introductionViewController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 }
