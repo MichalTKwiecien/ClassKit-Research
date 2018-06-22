@@ -15,8 +15,8 @@
 		7C9DEDB220DCCCDE005694BC /* UIViewExtension+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDB120DCCCDE005694BC /* UIViewExtension+Constraint.swift */; };
 		7C9DEDB520DCCD03005694BC /* ViewSetupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDB420DCCD03005694BC /* ViewSetupable.swift */; };
 		7C9DEDB920DCCE3F005694BC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7C9DEDB820DCCE3F005694BC /* README.md */; };
-		7C9DEDBB20DCD507005694BC /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDBA20DCD507005694BC /* IntroductionViewController.swift */; };
-		7C9DEDBD20DCD560005694BC /* IntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDBC20DCD560005694BC /* IntroductionView.swift */; };
+		7C9DEDBB20DCD507005694BC /* SelectModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDBA20DCD507005694BC /* SelectModuleViewController.swift */; };
+		7C9DEDBD20DCD560005694BC /* SelectModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDBC20DCD560005694BC /* SelectModuleView.swift */; };
 		7C9DEDC120DCDB56005694BC /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDC020DCDB56005694BC /* GameService.swift */; };
 		7C9DEDC320DCDB6F005694BC /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDC220DCDB6F005694BC /* Exercise.swift */; };
 		7C9DEDC520DCDBAB005694BC /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDC420DCDBAB005694BC /* ExerciseType.swift */; };
@@ -24,6 +24,8 @@
 		7C9DEDC920DCEC84005694BC /* ExerciseModuleGeneratorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDC820DCEC84005694BC /* ExerciseModuleGeneratorService.swift */; };
 		7C9DEDCB20DCEEF3005694BC /* ExerciseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDCA20DCEEF3005694BC /* ExerciseState.swift */; };
 		7C9DEDCD20DCF010005694BC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDCC20DCF010005694BC /* Module.swift */; };
+		7C9DEDCF20DCF337005694BC /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDCE20DCF337005694BC /* UITableViewExtension.swift */; };
+		7C9DEDD120DCF35B005694BC /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDD020DCF35B005694BC /* NSObjectExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +39,8 @@
 		7C9DEDB120DCCCDE005694BC /* UIViewExtension+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewExtension+Constraint.swift"; sourceTree = "<group>"; };
 		7C9DEDB420DCCD03005694BC /* ViewSetupable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSetupable.swift; sourceTree = "<group>"; };
 		7C9DEDB820DCCE3F005694BC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		7C9DEDBA20DCD507005694BC /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
-		7C9DEDBC20DCD560005694BC /* IntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
+		7C9DEDBA20DCD507005694BC /* SelectModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModuleViewController.swift; sourceTree = "<group>"; };
+		7C9DEDBC20DCD560005694BC /* SelectModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModuleView.swift; sourceTree = "<group>"; };
 		7C9DEDC020DCDB56005694BC /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 		7C9DEDC220DCDB6F005694BC /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		7C9DEDC420DCDBAB005694BC /* ExerciseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		7C9DEDC820DCEC84005694BC /* ExerciseModuleGeneratorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModuleGeneratorService.swift; sourceTree = "<group>"; };
 		7C9DEDCA20DCEEF3005694BC /* ExerciseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseState.swift; sourceTree = "<group>"; };
 		7C9DEDCC20DCF010005694BC /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		7C9DEDCE20DCF337005694BC /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		7C9DEDD020DCF35B005694BC /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				7C9DEDB120DCCCDE005694BC /* UIViewExtension+Constraint.swift */,
+				7C9DEDCE20DCF337005694BC /* UITableViewExtension.swift */,
+				7C9DEDD020DCF35B005694BC /* NSObjectExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -164,18 +170,18 @@
 		7C9DEDAB20DCCC72005694BC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				7C9DEDAC20DCCC7F005694BC /* Introduciton */,
+				7C9DEDAC20DCCC7F005694BC /* Select module */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		7C9DEDAC20DCCC7F005694BC /* Introduciton */ = {
+		7C9DEDAC20DCCC7F005694BC /* Select module */ = {
 			isa = PBXGroup;
 			children = (
-				7C9DEDBA20DCD507005694BC /* IntroductionViewController.swift */,
-				7C9DEDBC20DCD560005694BC /* IntroductionView.swift */,
+				7C9DEDBA20DCD507005694BC /* SelectModuleViewController.swift */,
+				7C9DEDBC20DCD560005694BC /* SelectModuleView.swift */,
 			);
-			path = Introduciton;
+			path = "Select module";
 			sourceTree = "<group>";
 		};
 		7C9DEDB320DCCCF1005694BC /* Abstraction */ = {
@@ -277,13 +283,15 @@
 			files = (
 				7C9DEDAE20DCCCB4005694BC /* View.swift in Sources */,
 				7C9DEDB020DCCCBA005694BC /* TypedViewController.swift in Sources */,
-				7C9DEDBD20DCD560005694BC /* IntroductionView.swift in Sources */,
+				7C9DEDBD20DCD560005694BC /* SelectModuleView.swift in Sources */,
 				7C9DEDB220DCCCDE005694BC /* UIViewExtension+Constraint.swift in Sources */,
 				7C9DED9220DCCAD2005694BC /* ApplicationDelegate.swift in Sources */,
 				7C9DEDC920DCEC84005694BC /* ExerciseModuleGeneratorService.swift in Sources */,
+				7C9DEDCF20DCF337005694BC /* UITableViewExtension.swift in Sources */,
+				7C9DEDD120DCF35B005694BC /* NSObjectExtension.swift in Sources */,
 				7C9DEDC720DCDC0D005694BC /* Answer.swift in Sources */,
 				7C9DEDC520DCDBAB005694BC /* ExerciseType.swift in Sources */,
-				7C9DEDBB20DCD507005694BC /* IntroductionViewController.swift in Sources */,
+				7C9DEDBB20DCD507005694BC /* SelectModuleViewController.swift in Sources */,
 				7C9DEDB520DCCD03005694BC /* ViewSetupable.swift in Sources */,
 				7C9DEDCB20DCEEF3005694BC /* ExerciseState.swift in Sources */,
 				7C9DEDCD20DCF010005694BC /* Module.swift in Sources */,
