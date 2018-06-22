@@ -10,4 +10,4 @@
 ### Instalation
 
 1. Clone repository:
-2. Open `DutieSplit.xcodeproj` file and build the project.
+2. Open `ClassKit Research.xcodeproj` file and build the project.
