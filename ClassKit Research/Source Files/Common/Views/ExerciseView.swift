@@ -1,35 +1,38 @@
 //
-//  ModuleQuizView.swift
+//  ExerciseView.swift
 //  ClassKit Research
 //
 
 
 import UIKit
 
-final class ModuleQuizView: View, ViewSetupable {
+final class ExerciseView: View, ViewSetupable {
     
-    lazy var titleLabel: UILabel = {
+    private var exercise: Exercise!
+    
+    private lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.font = .systemFont(ofSize: 24)
         view.textAlignment = .center
         return view.layoutable()
     }()
     
-    lazy var exerciseView = ExerciseView().layoutable()
+    func setup(with exercise: Exercise) {
+        titleLabel.text = exercise.question
+    }
     
     func setupViewHierarchy() {
-        [titleLabel, exerciseView].forEach(addSubview)
+        [titleLabel].forEach(addSubview)
     }
     
     func setupConstraints() {
         titleLabel.constraintToSuperviewEdges(excludingAnchors: [.bottom])
-        exerciseView.constraintToSuperviewEdges(withInsets: .init(top: 100, left: 100, bottom: 100, right: 100))
         NSLayoutConstraint.activate([
             titleLabel.heightAnchor.constraint(equalToConstant: 80)
         ])
     }
     
     func setupProperties() {
-        backgroundColor = .white
+        backgroundColor = .lightGray
     }
 }

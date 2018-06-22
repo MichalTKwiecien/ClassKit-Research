@@ -28,6 +28,7 @@
 		7C9DEDD120DCF35B005694BC /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDD020DCF35B005694BC /* NSObjectExtension.swift */; };
 		7C9DEDD420DCFDFD005694BC /* ModuleQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDD320DCFDFD005694BC /* ModuleQuizView.swift */; };
 		7C9DEDD620DCFE31005694BC /* ModuleQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDD520DCFE31005694BC /* ModuleQuizViewController.swift */; };
+		7C9DEDD920DD0142005694BC /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DEDD820DD0142005694BC /* ExerciseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		7C9DEDD020DCF35B005694BC /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		7C9DEDD320DCFDFD005694BC /* ModuleQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleQuizView.swift; sourceTree = "<group>"; };
 		7C9DEDD520DCFE31005694BC /* ModuleQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleQuizViewController.swift; sourceTree = "<group>"; };
+		7C9DEDD820DD0142005694BC /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				7C9DEDA620DCCC30005694BC /* Application */,
-				7C9DEDA720DCCC3B005694BC /* Common */,
 				7C9DEDAB20DCCC72005694BC /* Modules */,
+				7C9DEDA720DCCC3B005694BC /* Common */,
 			);
 			path = "Source Files";
 			sourceTree = "<group>";
@@ -134,6 +136,7 @@
 			children = (
 				7C9DEDB620DCCD82005694BC /* Services */,
 				7C9DEDB320DCCCF1005694BC /* Abstraction */,
+				7C9DEDD720DD012D005694BC /* Views */,
 				7C9DEDAA20DCCC5F005694BC /* Models */,
 				7C9DEDA920DCCC58005694BC /* Extensions */,
 				7C9DEDA820DCCC4B005694BC /* Base classes */,
@@ -163,10 +166,10 @@
 		7C9DEDAA20DCCC5F005694BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7C9DEDCC20DCF010005694BC /* Module.swift */,
 				7C9DEDC220DCDB6F005694BC /* Exercise.swift */,
 				7C9DEDC620DCDC0D005694BC /* Answer.swift */,
 				7C9DEDCA20DCEEF3005694BC /* ExerciseState.swift */,
-				7C9DEDCC20DCF010005694BC /* Module.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +225,14 @@
 				7C9DEDD320DCFDFD005694BC /* ModuleQuizView.swift */,
 			);
 			path = "Module quiz";
+			sourceTree = "<group>";
+		};
+		7C9DEDD720DD012D005694BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7C9DEDD820DD0142005694BC /* ExerciseView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C9DEDD920DD0142005694BC /* ExerciseView.swift in Sources */,
 				7C9DEDAE20DCCCB4005694BC /* View.swift in Sources */,
 				7C9DEDB020DCCCBA005694BC /* TypedViewController.swift in Sources */,
 				7C9DEDBD20DCD560005694BC /* SelectModuleView.swift in Sources */,
