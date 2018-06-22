@@ -6,10 +6,12 @@
 
 class Module: Equatable {
     
+    weak var gameService: GameService?
     let title: String
     var exercises: [ExerciseType]
     
-    init(title: String, exercises: [ExerciseType]) {
+    init(gameService: GameService, title: String, exercises: [ExerciseType]) {
+        self.gameService = gameService
         self.title = title
         self.exercises = exercises
     }
@@ -22,14 +24,29 @@ class Module: Equatable {
         guard let index = exercises.index(where: { element -> Bool in
             return element.question == exercise.question
         }) else { return }
-        
         exercises[index].state = .answered(correct: answer.correct)
+        gameService?.didUpdatedAnswerInside(module: self)
     }
     
     func start() {
         for i in 0..<exercises.count {
             exercises[i].state = .unanswered
         }
+        gameService?.didStart(module: self)
+    }
+    
+    func finish() {
+        gameService?.didFinish(module: self)
+    }
+    
+    func calculateScore() -> Double {
+        var correctAnswers = 0.0
+        for element in exercises {
+            if case ExerciseState.answered(correct: true) = element.state {
+                correctAnswers += 1
+            }
+        }
+        return correctAnswers / Double(exercises.count)
     }
     
     static func == (lhs: Module, rhs: Module) -> Bool {

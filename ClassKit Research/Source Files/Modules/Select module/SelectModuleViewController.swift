@@ -6,8 +6,8 @@
 
 import UIKit
 
-final class SelectModuleViewController: TypedViewController<SelectModuleView>, UITableViewDelegate, UITableViewDataSource {
-
+final class SelectModuleViewController: TypedViewController<SelectModuleView>, UITableViewDelegate, UITableViewDataSource, ModuleQuizViewControllerDelegate {
+    
     private let modules: [Module]
     
     init(modules: [Module], viewMaker: @autoclosure @escaping () -> View) {
@@ -46,6 +46,22 @@ final class SelectModuleViewController: TypedViewController<SelectModuleView>, U
         let model = modules[indexPath.row]
         model.start()
         let moduleQuizViewController = ModuleQuizViewController(module: model, viewMaker: ModuleQuizView())
+        moduleQuizViewController.delegate = self
         present(moduleQuizViewController, animated: true)
+    }
+    
+    func moduleQuizViewController(_ viewController: ModuleQuizViewController, didFinishModule module: Module) {
+        module.finish()
+        presentAlertWithScore(fromModule: module)
+    }
+    
+    private func presentAlertWithScore(fromModule module: Module) {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .percent
+        let percentageScore = numberFormatter.string(from: NSNumber(value: module.calculateScore())) ?? "0 %"
+        let message = "You've scored \(percentageScore)"
+        let alertController = UIAlertController(title: "Results", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
     }
 }

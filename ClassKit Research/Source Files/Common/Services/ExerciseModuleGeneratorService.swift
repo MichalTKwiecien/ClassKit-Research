@@ -6,7 +6,7 @@
 
 final class ExerciseModuleGeneratorService {
     
-    static func generateEasyMathModule() -> Module {
+    static func generateEasyMathModule(for service: GameService) -> Module {
         let exercise1 = Exercise(
             question: "12 + 7 = ?",
             answers: [
@@ -35,6 +35,7 @@ final class ExerciseModuleGeneratorService {
             ]
         )
         return Module(
+            gameService: service,
             title: "Easy algebra exercises",
             exercises: [exercise1, exercise2, exercise3]
         )
