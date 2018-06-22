@@ -61,7 +61,7 @@ final class ExerciseView: View, ViewSetupable {
     func setup(with exercise: ExerciseType) {
         self.exercise = exercise
         titleLabel.text = exercise.question
-        for i in 0...3 {
+        for i in 0..<answerButtons.count {
             answerButtons[i].setTitle(exercise.answers[i].value, for: .normal)
         }
     }
