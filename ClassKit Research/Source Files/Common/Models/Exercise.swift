@@ -4,7 +4,7 @@
 //
 
 
-struct Exercise: ExerciseType {
+struct Exercise: ExerciseType, Equatable {
     
     let question: String
     let answers: [Answer]
@@ -13,5 +13,9 @@ struct Exercise: ExerciseType {
     init(question: String, answers: [Answer]) {
         self.question = question
         self.answers = answers
+    }
+    
+    static func == (lhs: Exercise, rhs: Exercise) -> Bool {
+        return lhs.question == rhs.question
     }
 }

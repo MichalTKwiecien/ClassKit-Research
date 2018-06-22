@@ -44,6 +44,7 @@ final class SelectModuleViewController: TypedViewController<SelectModuleView>, U
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = modules[indexPath.row]
+        model.start()
         let moduleQuizViewController = ModuleQuizViewController(module: model, viewMaker: ModuleQuizView())
         present(moduleQuizViewController, animated: true)
     }

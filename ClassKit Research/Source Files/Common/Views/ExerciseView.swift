@@ -12,9 +12,9 @@ protocol ExerciseViewDelegate: class {
 
 final class ExerciseView: View, ViewSetupable {
     
-    private var exercise: ExerciseType!
+    weak var delegate: ExerciseViewDelegate?
     
-    private weak var delegate: ExerciseViewDelegate?
+    private var exercise: ExerciseType!
     
     private lazy var titleLabel: UILabel = {
         let view = UILabel()
@@ -58,12 +58,29 @@ final class ExerciseView: View, ViewSetupable {
         return view.layoutable()
     }()
     
-    func setup(with exercise: ExerciseType) {
+    func setup(with exercise: ExerciseType, animated: Bool) {
         self.exercise = exercise
         titleLabel.text = exercise.question
         for i in 0..<answerButtons.count {
             answerButtons[i].setTitle(exercise.answers[i].value, for: .normal)
         }
+        if animated {
+            flipAnimation()
+        }
+    }
+    
+    func blink(success: Bool, completion: @escaping () -> ()) {
+        let view = UIView().layoutable()
+        view.backgroundColor = success ? .green : .red
+        view.alpha = 0
+        addSubview(view)
+        view.constraintToSuperviewEdges()
+        UIView.animate(withDuration: 0.35, animations: {
+            view.alpha = 1
+        }, completion: { _ in
+            completion()
+            view.removeFromSuperview()
+        })
     }
     
     func setupViewHierarchy() {
@@ -85,6 +102,11 @@ final class ExerciseView: View, ViewSetupable {
         backgroundColor = .white
         layer.borderColor = UIColor.lightGray.cgColor
         layer.borderWidth = 2
+    }
+    
+    private func flipAnimation() {
+        let options: UIViewAnimationOptions = [.transitionFlipFromRight]
+        UIView.transition(with: self, duration: 0.5, options: options, animations: nil, completion: nil)
     }
     
     @objc private func didTapAnswerButton(_ button: UIButton) {
