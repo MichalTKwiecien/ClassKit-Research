@@ -29,6 +29,7 @@ final class GameService {
     }
     
     func didUpdatedAnswerInside(module: Module) {
+        // Add additional ClassKit item with answered state
         guard let currentActivity = currentActivity else { return }
         var answeredExercises: [ExerciseType] = []
         for element in module.exercises {
@@ -39,7 +40,7 @@ final class GameService {
             }
         }
         guard let lastAnswered = answeredExercises.last else { return }
-        let item = CLSBinaryItem(identifier: lastAnswered.identifier, title: lastAnswered.question, type: .passFail)
+        let item = CLSBinaryItem(identifier: lastAnswered.identifier, title: lastAnswered.question, type: .trueFalse)
         if case ExerciseState.answered(correct: true) = lastAnswered.state {
             item.value = true
         } else {
@@ -49,7 +50,19 @@ final class GameService {
     }
     
     func didFinish(module: Module) {
-        // TODO: Integrate with ClassKit
+        // Finish activity and publish score to ClassKit
+        guard let currentActivity = currentActivity else { return }
+        let score = CLSScoreItem(
+            identifier: module.identifier + "_score",
+            title: "Total score",
+            score: module.calculateNumberOfCorrectAnswers(),
+            maxScore: Double(module.exercises.count)
+        )
+        currentActivity.primaryActivityItem = score
+        currentActivity.stop()
+        CLSDataStore.shared.save { _ in
+            self.currentActivity = nil
+        }
     }
     
     private func setupClassKit() {
