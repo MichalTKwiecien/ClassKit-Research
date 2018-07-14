@@ -14,6 +14,11 @@ final class SelectModuleViewController: TypedViewController<SelectModuleView>, U
         self.modules = modules
         super.init(viewMaker: viewMaker() as! SelectModuleView)
     }
+    
+    func deepLink(to module: Module) {
+        guard let index = modules.index(of: module) else { return }
+        present(module: modules[index])
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,16 +48,20 @@ final class SelectModuleViewController: TypedViewController<SelectModuleView>, U
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let model = modules[indexPath.row]
-        model.start()
-        let moduleQuizViewController = ModuleQuizViewController(module: model, viewMaker: ModuleQuizView())
-        moduleQuizViewController.delegate = self
-        present(moduleQuizViewController, animated: true)
+        let module = modules[indexPath.row]
+        present(module: module)
     }
     
     func moduleQuizViewController(_ viewController: ModuleQuizViewController, didFinishModule module: Module) {
         module.finish()
         presentAlertWithScore(fromModule: module)
+    }
+    
+    private func present(module: Module) {
+        module.start()
+        let moduleQuizViewController = ModuleQuizViewController(module: module, viewMaker: ModuleQuizView())
+        moduleQuizViewController.delegate = self
+        present(moduleQuizViewController, animated: true)
     }
     
     private func presentAlertWithScore(fromModule module: Module) {

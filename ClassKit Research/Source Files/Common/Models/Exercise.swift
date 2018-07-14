@@ -6,11 +6,13 @@
 
 struct Exercise: ExerciseType, Equatable {
     
+    let identifier: String
     let question: String
     let answers: [Answer]
     var state: ExerciseState = .unanswered
     
-    init(question: String, answers: [Answer]) {
+    init(identifier: String, question: String, answers: [Answer]) {
+        self.identifier = identifier
         self.question = question
         self.answers = answers
     }

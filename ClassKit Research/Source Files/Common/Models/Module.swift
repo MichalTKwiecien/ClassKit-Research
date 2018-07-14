@@ -7,11 +7,13 @@
 class Module: Equatable {
     
     weak var gameService: GameService?
+    let identifier: String
     let title: String
     var exercises: [ExerciseType]
     
-    init(gameService: GameService, title: String, exercises: [ExerciseType]) {
+    init(gameService: GameService, identifier: String, title: String, exercises: [ExerciseType]) {
         self.gameService = gameService
+        self.identifier = identifier
         self.title = title
         self.exercises = exercises
     }
@@ -39,13 +41,18 @@ class Module: Equatable {
         gameService?.didFinish(module: self)
     }
     
-    func calculateScore() -> Double {
-        var correctAnswers = 0.0
+    func calculateNumberOfCorrectAnswers() -> Double {
+        var correctAnswers = 0
         for element in exercises {
             if case ExerciseState.answered(correct: true) = element.state {
                 correctAnswers += 1
             }
         }
+        return Double(correctAnswers)
+    }
+    
+    func calculateScore() -> Double {
+        let correctAnswers = calculateNumberOfCorrectAnswers()
         return correctAnswers / Double(exercises.count)
     }
     

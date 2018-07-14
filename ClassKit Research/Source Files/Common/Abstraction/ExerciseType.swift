@@ -7,6 +7,9 @@
 protocol ExerciseType {
     
     /// Question that the user will be asked
+    var identifier: String { get }
+    
+    /// Question that the user will be asked
     var question: String { get }
     
     /// Available answers
