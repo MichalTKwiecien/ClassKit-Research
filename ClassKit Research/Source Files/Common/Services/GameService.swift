@@ -44,9 +44,7 @@ final class GameService {
             contextsCoCreate.forEach { parent.addChildContext($0.value) }
             
             // Save our changes
-            CLSDataStore.shared.save { (error) in
-                print(error ?? "no error")
-            }
+            CLSDataStore.shared.save()
         }
     }
 }
