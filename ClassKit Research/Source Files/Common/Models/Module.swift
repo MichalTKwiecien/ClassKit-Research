@@ -7,11 +7,13 @@
 class Module: Equatable {
     
     weak var gameService: GameService?
+    let identifier: String
     let title: String
     var exercises: [ExerciseType]
     
-    init(gameService: GameService, title: String, exercises: [ExerciseType]) {
+    init(gameService: GameService, identifier: String, title: String, exercises: [ExerciseType]) {
         self.gameService = gameService
+        self.identifier = identifier
         self.title = title
         self.exercises = exercises
     }
