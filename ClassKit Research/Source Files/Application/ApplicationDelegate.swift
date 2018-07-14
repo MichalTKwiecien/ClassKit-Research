@@ -23,12 +23,7 @@ private final class ApplicationDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-        guard
-            let contextPath = userActivity.contextIdentifierPath,
-            let lastItem = contextPath.last,
-            let module = gameService.modules.first(where: { $0.identifier == lastItem })
-        else { return false }
-        selectModuleViewController?.deepLink(to: module)
-        return true
+        // TODO 3: Handle deep linking from ClassKit. Use `userActivity.contextIdentifierPath` for getting context path.
+        return false
     }
 }
