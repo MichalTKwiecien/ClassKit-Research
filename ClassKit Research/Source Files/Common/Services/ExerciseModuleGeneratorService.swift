@@ -8,6 +8,7 @@ final class ExerciseModuleGeneratorService {
     
     static func generateEasyMathModule1(for service: GameService) -> Module {
         let exercise1 = Exercise(
+            identifier: "Module1_Question1",
             question: "12 + 7 = ?",
             answers: [
                 Answer(value: "16", correct: false),
@@ -17,6 +18,7 @@ final class ExerciseModuleGeneratorService {
             ]
         )
         let exercise2 = Exercise(
+            identifier: "Module1_Question2",
             question: "2 + ? = 5",
             answers: [
                 Answer(value: "1", correct: false),
@@ -26,6 +28,7 @@ final class ExerciseModuleGeneratorService {
             ]
         )
         let exercise3 = Exercise(
+            identifier: "Module1_Question3",
             question: "8 * 3 = ?",
             answers: [
                 Answer(value: "16", correct: false),
@@ -44,6 +47,7 @@ final class ExerciseModuleGeneratorService {
     
     static func generateEasyMathModule2(for service: GameService) -> Module {
         let exercise1 = Exercise(
+            identifier: "Module2_Question1",
             question: "8 + 7 = ?",
             answers: [
                 Answer(value: "12", correct: false),
@@ -53,6 +57,7 @@ final class ExerciseModuleGeneratorService {
                 ]
         )
         let exercise2 = Exercise(
+            identifier: "Module2_Question2",
             question: "9 - ? = 5",
             answers: [
                 Answer(value: "2", correct: false),
@@ -62,6 +67,7 @@ final class ExerciseModuleGeneratorService {
                 ]
         )
         let exercise3 = Exercise(
+            identifier: "Module2_Question3",
             question: "21 / 3 = ?",
             answers: [
                 Answer(value: "4", correct: false),
