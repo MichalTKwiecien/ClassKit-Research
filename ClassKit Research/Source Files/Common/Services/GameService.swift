@@ -15,7 +15,7 @@ final class GameService {
     init() {
         modules.append(ExerciseModuleGeneratorService.generateEasyMathModule1(for: self))
         modules.append(ExerciseModuleGeneratorService.generateEasyMathModule2(for: self))
-        setupClassKit()
+        setupClassKitContexts()
     }
     
     func didStart(module: Module) {
@@ -65,7 +65,7 @@ final class GameService {
         }
     }
     
-    private func setupClassKit() {
+    private func setupClassKitContexts() {
         // Create contexts
         var contextsCoCreate: [String: CLSContext] = [:]
         for module in modules {
